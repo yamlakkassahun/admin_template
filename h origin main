@@ -1,0 +1,35 @@
+[33mcommit 80cbbb8c55df20bc8125ef81bdcf16aa5575efee[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: yamlakkassahun <yamlak.k@gmail.com>
+Date:   Thu May 20 18:58:21 2021 +0300
+
+    add the image upload with pakege
+
+[33mcommit 6dd50094a751878c08723628a458774224d9e527[m
+Author: yamlakkassahun <yamlak.k@gmail.com>
+Date:   Thu May 20 14:08:43 2021 +0300
+
+    started the post crud and create the stepper form for it
+
+[33mcommit cfd57e1c858df8966802e3cefb0d8791528876da[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: yamlakkassahun <yamlak.k@gmail.com>
+Date:   Wed May 19 19:07:59 2021 +0300
+
+    add the profiles page and ad the alert messages to the profil , category and employee
+
+[33mcommit 66d3c082191ce0b1956960941c7eb209a205afa0[m
+Author: yamlakkassahun <yamlak.k@gmail.com>
+Date:   Wed May 19 18:24:41 2021 +0300
+
+    finshed the employee mangement
+
+[33mcommit fffc8acda688e6e897f337ec61c0f9a52a7e4135[m
+Author: yamlakkassahun <yamlak.k@gmail.com>
+Date:   Wed May 19 13:40:01 2021 +0300
+
+    finshed the category crud
+
+[33mcommit 28d26ab26ccf342a99b7bb2b54e817f84a3e1d0b[m
+Author: yamlakkassahun <yamlak.k@gmail.com>
+Date:   Wed May 19 10:37:19 2021 +0300
+
+    inital commit
