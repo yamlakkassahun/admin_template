@@ -11,7 +11,7 @@
 
     <link rel="shortcut icon"
         href="<?php echo url('/'); ?>/assets/img/icons/icon-48x48.png" />
-    <title>Teret</title>
+    <title>Admin</title>
     <link href="<?php echo url('/'); ?>/assets/css/app.css" rel="stylesheet">
     <!-- add to document <head> -->
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
@@ -35,7 +35,7 @@
         <nav id="sidebar" class="sidebar">
             <div class="sidebar-content js-simplebar">
                 <a class="sidebar-brand" href="index.html">
-                    <span class="align-middle">Teret</span>
+                    <span class="align-middle">Admin </span>
                 </a>
                 <ul class="sidebar-nav">
                     <li class="sidebar-header">
@@ -51,6 +51,18 @@
                     <li class="sidebar-item {{ request()->is('profile*') ? 'active' : '' }}">
                         <a class="sidebar-link " href="{{ url('/profile') }}">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item {{ request()->is('category*') ? 'active' : '' }}">
+                        <a class="sidebar-link " href="{{ url('/category') }}">
+                            <i class="align-middle" data-feather="book"></i> <span class="align-middle">Category</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item {{ request()->is('food*') ? 'active' : '' }}">
+                        <a class="sidebar-link " href="{{ url('/food') }}">
+                            <i class="align-middle" data-feather="feather"></i> <span class="align-middle">Food</span>
                         </a>
                     </li>
 

@@ -85,45 +85,11 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-4">
-                                        <label for="inputUsername">Intended Group</label>
-                                        <select id="inputState" class="form-control @error('group') is-invalid @enderror"
-                                            name="group" placeholder="Employee Password">
-                                            <option value="{{ $data->group }}">{{ $data->group }}</option>
-                                            <option value="adult">Adults</option>
-                                            <option value="kid">Kids</option>
-                                            </option>
-                                        </select>
-                                        @error('group')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label for="inputUsernam">Category Color</label>
-                                        <input type="color" class=" @error('color') is-invalid @enderror"
-                                            value="{{ $data->color }}" name="color" placeholder="color" style="width:100%">
-                                        @error('color')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <hr>
                         <button type="submit" class="btn btn-pill btn-secondary">Update changes</button>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label for="inputUsername">Category Cover Image</label><br>
-                                <img src="/storage/{{ $data->coverImage }}" alt="" class="img-fluid" style="width:100%">
-                            </div>
-                        </div>
-
                     </form>
                 </div>
             </div>

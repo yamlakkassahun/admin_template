@@ -21,21 +21,12 @@ class Category extends Model
         'nameEn',
         'descriptionAm',
         'descriptionEn',
-        'group',
         'coverImage',
-        'color'
     ];
 
-
-    protected static $logAttributes = [
-        'nameAm',
-        'nameEn',
-        'descriptionAm',
-        'descriptionEn',
-        'group',
-        'coverImage',
-        'color'
-    ];
+    public function foods (){
+        return $this->hasMany(Food::class);
+    }
 
     /**
      * this is to relate the brand to the products of that brand

@@ -96,31 +96,6 @@
                                                 </span>
                                             @enderror
                                         </div>
-                                        <div class="col-md-4">
-                                            <label for="inputUsername">Intended Group</label>
-                                            <select id="inputState"
-                                                class="form-control @error('group') is-invalid @enderror" name="group"
-                                                placeholder="Employee Password">
-                                                <option value="adult">Adults</option>
-                                                <option value="kid">Kids</option>
-                                                </option>
-                                            </select>
-                                            @error('group')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="inputUsername">Choose Color</label>
-                                            <input type="color" class="form-control @error('color') is-invalid @enderror"
-                                                name="color" placeholder="Category Name" id="accept">
-                                            @error('color')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
                                     </div>
                                 </div>
                             </div>

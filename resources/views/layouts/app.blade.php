@@ -11,7 +11,7 @@
 
     <link rel="shortcut icon"
         href="<?php echo url('/'); ?>/assets/img/icons/icon-48x48.png" />
-    <title>Teret</title>
+    <title>Admin</title>
     <link href="<?php echo url('/'); ?>/assets/css/app.css" rel="stylesheet">
     <!-- add to document <head> -->
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />

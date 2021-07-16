@@ -5,12 +5,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AccountController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LogController;
-use App\Http\Controllers\Api\MobileController;
-use App\Http\Controllers\teretController;
-use App\Http\Controllers\SubscriberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/profile', ProfileController::class);
     Route::resource('/category', CategoryController::class );
     Route::resource('/employee', AccountController::class);
-    Route::resource('/posts', PostController::class);
+    Route::resource('/food', FoodController::class);
     Route::resource('/log', LogController::class);
     Route::get('/postlog/{id}', [LogController::class, 'postLogShow']);
     Route::get('/employeelog/{id}',[LogController::class, 'employeeLogShow']);
@@ -42,9 +39,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/category/upload', [CategoryController::class, 'upload']);
     Route::post('/employee/search', [AccountController::class, 'search'])->name('employeesearch');
     Route::post('/employee/upload', [AccountController::class, 'upload']);
+    Route::post('/food/upload', [FoodController::class, 'upload']);
+    Route::post('/food/search', [FoodController::class, 'search'])->name('foodsearch');
     Route::post('/profile/upload', [ProfileController::class, 'upload']);
-    Route::post('/posts/upload', [PostController::class, 'upload']);
-    Route::post('/post/search', [PostController::class, 'search'])->name('postsearch');
     Route::post('/admin/search', [AdminController::class, 'search'])->name('search');;
 });
 

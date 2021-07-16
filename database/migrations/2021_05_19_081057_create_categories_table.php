@@ -19,9 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->string('nameEn');
             $table->longText('descriptionAm');
             $table->longText('descriptionEn');
-            $table->string('group');
             $table->string('coverImage')->nullable();
-            $table->string('color');
             $table->timestamps();
         });
     }

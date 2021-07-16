@@ -46,16 +46,17 @@ class CategoryController extends Controller
             'descriptionAm' => ['required', 'string'],
             'nameEn' => ['required', 'string', 'max:255'],
             'descriptionEn' => ['required', 'string'],
-            'group' => ['required', 'string', 'max:255'],
-            'coverImage' => 'required',
-            'color' => ['required', 'string']
+            'coverImage' => 'required'
         ]);
-        $purifiedData = ['description' => Purifier::clean(request('description'))];
+
+        $purifiedDataAm = ['descriptionAm' => Purifier::clean(request('descriptionAm'))];
+        $purifiedDataEn = ['descriptionEn' => Purifier::clean(request('descriptionEn'))];
 
         Category::create(
             array_merge(
                 $data,
-                $purifiedData
+                $purifiedDataAm,
+                $purifiedDataEn,
             )
         );
 
@@ -100,19 +101,19 @@ class CategoryController extends Controller
             'descriptionAm' => ['required', 'string'],
             'nameEn' => ['required', 'string', 'max:255'],
             'descriptionEn' => ['required', 'string'],
-            'group' => ['required', 'string', 'max:255'],
-            'coverImage' => '',
-            'color' => ['required', 'string']
+            'coverImage' => ''
         ]);
 
 
         $oldData = Category::findOrFail($id);
 
-        $purifiedData = ['description' => Purifier::clean(request('description'))];
+        $purifiedDataAm = ['descriptionAm' => Purifier::clean(request('descriptionAm'))];
+        $purifiedDataEn = ['descriptionEn' => Purifier::clean(request('descriptionEn'))];
 
         $oldData->update(array_merge(
             $data,
-            $purifiedData
+            $purifiedDataAm,
+            $purifiedDataEn
         ));
 
         return redirect('/category')->with('message', 'Category Updated Successfully');
@@ -128,7 +129,6 @@ class CategoryController extends Controller
     {
         $data = Category::findOrFail($id);
         Storage::delete("/public/{$data->coverImage}");
-        Storage::delete("/public/{$data->logo}");
         $data->delete();
         return redirect('/category')->with('message', 'Category Deleted Successfully');
     }
@@ -140,8 +140,10 @@ class CategoryController extends Controller
 
         // Search in the title and body columns from the posts table
         $data = Category::query()
-            ->where('name', 'LIKE', "%{$search}%")
-            ->orWhere('description', 'LIKE', "%{$search}%")
+            ->where('nameEn', 'LIKE', "%{$search}%")
+            ->orWhere('nameAm', 'LIKE', "%{$search}%")
+            ->orWhere('descriptionAm', 'LIKE', "%{$search}%")
+            ->orWhere('descriptionEn', 'LIKE', "%{$search}%")
             ->simplePaginate(4);
 
         // Return the search view with the resluts compacted
