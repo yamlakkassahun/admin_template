@@ -84,12 +84,12 @@
                                         <td>{{ $data_out->nameEn }}</td>
                                         <td>{!! Str::limit($data_out->descriptionEn, 80) !!} </td>
                                         <td class="table-action d-flex ">
-                                            <a href="/category/{{ $data_out->id }}/edit"><i class="align-middle mt-2"
+                                            <a href="/category/{{ $data_out->id }}/edit"><i class="align-middle mt-2 mr-5"
                                                     data-feather="edit-2"></i></a>
                                             <form action="/category/{{ $data_out->id }}" method="post">
                                                 @csrf
                                                 @method('delete')
-                                                <button class="btn" type="submit"><i class=" align-middle ml-5"
+                                                <button class="btn widthLimit" type="submit"><i class="align-middle "
                                                         data-feather="trash"></i></button>
                                             </form>
                                         </td>

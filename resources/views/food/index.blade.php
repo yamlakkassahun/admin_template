@@ -87,13 +87,13 @@
                                         <td>{{ $data_out->category->nameEn }}</td>
                                         <td class="table-action d-flex ">
                                             <div class="mt-1">
-                                                <a href="/food/{{ $data_out->id }}/edit"><i class="align-middle"
+                                                <a href="/food/{{ $data_out->id }}/edit"><i class="align-middle align-middle mr-4"
                                                         data-feather="edit-2"></i></a>
                                             </div>
                                             <form action="/food/{{ $data_out->id }}" method="post">
                                                 @csrf
                                                 @method('delete')
-                                                <button class="btn" type="submit"><i class=" align-middle ml-3"
+                                                <button class="btn" type="submit"><i class=" align-middle"
                                                         data-feather="trash"></i></button>
                                             </form>
                                         </td>
