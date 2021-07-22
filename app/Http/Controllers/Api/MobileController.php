@@ -48,6 +48,8 @@ class MobileController extends Controller
         if($category == null){
           return response()->json(['error'=>'Category with this Id not found'],404); 
         }
+
+        $data = $category->foods;
         return  response()->json($category,200);
     }
 
