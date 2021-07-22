@@ -22,4 +22,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/subscriber',[SubscriberController::class,'subscriberloginApi']);
 Route::post('/subscriber/check',[SubscriberController::class,'subscriberloginApiCheck']);
+Route::get('/recipes',[MobileController::class,'allRecipes']);
+Route::get('/latest/recipes',[MobileController::class,'latestRecipes']);
+Route::get('/recipe/{id}',[MobileController::class,'singleRecipe']);
+Route::get('/latest/categories',[MobileController::class,'latestCategories']);
+Route::get('/categories',[MobileController::class,'allCategories']);
+Route::get('/category/{id}',[MobileController::class,'singleCategory']);
 
