@@ -261,7 +261,7 @@
         const pond4 = FilePond.create(videoAm);
         FilePond.setOptions({
             server: {
-                url: '/posts/upload',
+                url: '/food/upload',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 }
