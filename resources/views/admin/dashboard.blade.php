@@ -34,7 +34,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title mb-4">Foods</h5>
-                            <h1 class="display-5 mt-1 mb-3">@if(count($food) > 0) {{count($food)}}@else 0 @endif</h1>
+                            <h1 class="display-5 mt-1 mb-3">0</h1>
                             <div class="mb-1">
                                 <span class="text-success">
                                 <span class="text-muted">Total</span>

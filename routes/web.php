@@ -8,6 +8,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LogController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,16 +32,11 @@ Route::middleware('auth')->group(function () {
     Route::resource('/profile', ProfileController::class);
     Route::resource('/category', CategoryController::class );
     Route::resource('/employee', AccountController::class);
-    Route::resource('/food', FoodController::class);
     Route::resource('/log', LogController::class);
-    Route::get('/postlog/{id}', [LogController::class, 'postLogShow']);
-    Route::get('/employeelog/{id}',[LogController::class, 'employeeLogShow']);
-    Route::post('/category/search', [CategoryController::class, 'search'])->name('categorysearch');
+    Route::post('/category/search', [CategoryController::class, 'search'])->name('category_search');
     Route::post('/category/upload', [CategoryController::class, 'upload']);
-    Route::post('/employee/search', [AccountController::class, 'search'])->name('employeesearch');
+    Route::post('/employee/search', [AccountController::class, 'search'])->name('employee_search');
     Route::post('/employee/upload', [AccountController::class, 'upload']);
-    Route::post('/food/upload', [FoodController::class, 'upload']);
-    Route::post('/food/search', [FoodController::class, 'search'])->name('foodsearch');
     Route::post('/profile/upload', [ProfileController::class, 'upload']);
     Route::post('/admin/search', [AdminController::class, 'search'])->name('search');;
 });

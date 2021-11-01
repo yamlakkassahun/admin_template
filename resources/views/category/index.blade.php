@@ -49,7 +49,7 @@
                         <h5 class="card-title">All Categories</h5>
                     </div>
                     <div class="ml-auto">
-                        <form class="form-inline d-none d-sm-inline-block" action="{{ route('categorysearch') }}"
+                        <form class="form-inline d-none d-sm-inline-block" action="{{ route('category_search') }}"
                             method="post">
                             @csrf
                             <div class="input-group input-group-navbar">

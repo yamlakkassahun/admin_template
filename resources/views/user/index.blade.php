@@ -49,7 +49,7 @@
                         <h5 class="card-title">All Employees</h5>
                     </div>
                     <div class="ml-auto">
-                        <form class="form-inline d-none d-sm-inline-block" action="/employee/search" method="post">
+                        <form class="form-inline d-none d-sm-inline-block" action="{{ route('employee_search')}}" method="post">
                             @csrf
                             <div class="input-group input-group-navbar">
                                 <input type="text" class="form-control" name="search" placeholder="employee Search…"

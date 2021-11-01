@@ -60,12 +60,6 @@
                         </a>
                     </li>
 
-                    <li class="sidebar-item {{ request()->is('food*') ? 'active' : '' }}">
-                        <a class="sidebar-link " href="{{ url('/food') }}">
-                            <i class="align-middle" data-feather="feather"></i> <span class="align-middle">Food</span>
-                        </a>
-                    </li>
-
                     @if (Auth::user()->type == 'admin')
                         <li class="sidebar-header">
                             Admin Page
