@@ -99,7 +99,7 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputCity">Phone</label>
-                                            <input type="number" class="form-control @error('phone') is-invalid @enderror"
+                                            <input type="text" class="form-control @error('phone') is-invalid @enderror"
                                                 name="phone" value="{{ Auth::user()->phone }}" id="inputCity" />
                                             @error('phone')
                                                 <span class="invalid-feedback" role="alert">

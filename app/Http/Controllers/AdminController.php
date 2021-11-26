@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
-use App\Models\Food;
 use App\Models\User;
 
 class AdminController extends Controller
@@ -26,10 +25,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $category = Category::All();
-        $food = Food::All();
         $employee = User::All();
-        return view('admin.dashboard' , compact('category', 'food', 'employee'));
+        return view('admin.dashboard' , compact('employee'));
     }
 
     public function search(Request $request)
