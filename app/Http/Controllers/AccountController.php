@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Notifications\UserNotification;
+use Illuminate\Support\Facades\Notification;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
@@ -49,7 +51,7 @@ class AccountController extends Controller
             'password' => ['required', 'string', 'min:8'],
         ]);
 
-
+        $user = User::all();
         User::create([
             'name' => $data['name'],
             'image' => $data['image'],
@@ -60,6 +62,7 @@ class AccountController extends Controller
             'password' => Hash::make(request('password'))
         ]);
 
+        Notification::send($user,new UserNotification($user->name));
         return redirect('/employee');
     }
 

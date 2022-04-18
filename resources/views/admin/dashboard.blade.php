@@ -24,7 +24,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title mb-4">Categories</h5>
-                            <h1 class="display-5 mt-1 mb-3">@if(count($category) > 0) {{count($category)}}@else 0 @endif </h1>
+                            <h1 class="display-5 mt-1 mb-3">9 </h1>
                             <div class="mb-1">
                                 <span class="text-danger">
                                 <span class="text-muted">Total</span>
