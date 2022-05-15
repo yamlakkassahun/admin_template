@@ -16,10 +16,12 @@ class UserNotification extends Notification
      *
      * @return void
      */
-    public function __construct($name)
+    public function __construct($name, $email, $type)
     {
         //parameters
         $this->name = $name;
+        $this->email = $email;
+        $this->type = $type;
     }
 
     /**
@@ -58,6 +60,8 @@ class UserNotification extends Notification
         return [
             //the values to send as a notification
             'name' => $this->name,
+            'email' => $this->email,
+            'type' => $this->type,
         ];
     }
 }

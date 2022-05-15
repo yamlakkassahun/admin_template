@@ -62,7 +62,7 @@ class AccountController extends Controller
             'password' => Hash::make(request('password'))
         ]);
 
-        Notification::send($user,new UserNotification($user->name));
+        Notification::send($user,new UserNotification($data['name'],$data['email'],'User' ));
         return redirect('/employee');
     }
 

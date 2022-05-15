@@ -26,6 +26,10 @@ Route::get('/',function (){
     return redirect('/admin');
 });
 
+Route::get('/read',function (){
+    Auth()->user()->unreadNotifications->markAsRead();
+    return redirect()->back();
+});
 
 Route::middleware('auth')->group(function () {
     Route::resource('/admin', AdminController::class);
